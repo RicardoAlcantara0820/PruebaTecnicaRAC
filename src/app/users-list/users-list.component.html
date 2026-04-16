@@ -1,0 +1,16 @@
+<div *ngIf="loading">
+    Cargando.....
+</div>
+
+<div *ngIf="error">
+    {{error}}
+</div>
+
+<input type="text">
+<div class="container">
+    <div class="card" *ngFor="let user of usersFiltered" (click)="selectUser(user)">
+        <h3>{{user.fulName}}</h3>
+        <p>{{user.email}}</p>
+        <p>{{user.companyName}}</p>
+    </div>
+</div>
